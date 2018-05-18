@@ -1,0 +1,20 @@
+html {
+	background-color: #333;
+}
+
+header {
+	background-color: #0F7AE5;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+
+header h1, header span, header a {
+	color: #FFF;
+	margin: 0;
+}
+
+main {
+	background-color: #FFF;
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}

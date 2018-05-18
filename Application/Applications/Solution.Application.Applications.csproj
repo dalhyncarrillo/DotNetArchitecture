@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9849AE26-456B-49E8-9F13-EEDF6A0B33F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.Application.Applications</RootNamespace>
+    <AssemblyName>Solution.Application.Applications</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseApplication.cs" />
+    <Compile Include="Authentication\IAuthenticationApplication.cs" />
+    <Compile Include="Authentication\AuthenticationApplication.cs" />
+    <Compile Include="User\UserApplication.cs" />
+    <Compile Include="Base\IBaseApplication.cs" />
+    <Compile Include="User\IUserApplication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\Utils\Solution.CrossCutting.Utils.csproj">
+      <Project>{AC5DBDE6-F960-4BEB-AB4A-6F29FEDFD040}</Project>
+      <Name>Solution.CrossCutting.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain\Domains\Solution.Domain.Domains.csproj">
+      <Project>{74E377C0-B8D9-4C00-B874-22E3A6247ED0}</Project>
+      <Name>Solution.Domain.Domains</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Models\Solution.Model.Models.csproj">
+      <Project>{E860A484-DB10-401B-AAAE-951BE9109B04}</Project>
+      <Name>Solution.Model.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E860A484-DB10-401B-AAAE-951BE9109B04}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Solution.Model.Models</RootNamespace>
+    <AssemblyName>Solution.Model.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationModel.cs" />
+    <Compile Include="Authenticated\AuthenticatedModel.cs" />
+    <Compile Include="Authenticated\AuthenticatedValidation.cs" />
+    <Compile Include="Authentication\AuthenticationModel.cs" />
+    <Compile Include="Authentication\AuthenticationValidation.cs" />
+    <Compile Include="UserLogModel.cs" />
+    <Compile Include="UserModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserRoleModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\Resources\Solution.CrossCutting.Resources.csproj">
+      <Project>{DCD61F27-1B22-4E38-98AA-68A985D1FB61}</Project>
+      <Name>Solution.CrossCutting.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CrossCutting\Utils\Solution.CrossCutting.Utils.csproj">
+      <Project>{AC5DBDE6-F960-4BEB-AB4A-6F29FEDFD040}</Project>
+      <Name>Solution.CrossCutting.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enums\Solution.Model.Enums.csproj">
+      <Project>{3e3871e5-72c5-4e33-bfca-6796b93f8145}</Project>
+      <Name>Solution.Model.Enums</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
