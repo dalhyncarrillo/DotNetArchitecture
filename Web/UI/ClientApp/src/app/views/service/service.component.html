@@ -1,14 +1,14 @@
-﻿<table class="uk-table uk-table-striped uk-table-divider uk-table-hover">
+<table class="uk-table uk-table-divider uk-table-hover uk-table-small uk-table-striped">
 	<thead>
 		<tr>
-			<th class="uk-text-center">Id</th>
-			<th> Name</th>
+			<th class="uk-text-center uk-text-nowrap">Id</th>
+			<th class="uk-text-nowrap">Name</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr *ngFor="let item of list">
-			<td class="uk-text-center">{{ item.id }}</td>
-			<td>{{ item.name }}</td>
+			<td class="uk-text-center uk-text-nowrap">{{ item.id }}</td>
+			<td class="uk-text-nowrap">{{ item.name }}</td>
 		</tr>
 	</tbody>
 </table>
