@@ -4,7 +4,7 @@ This project has the purpose of serving as architecture for projects with ASP.NE
 
 [![Logo](Screenshots/Microsoft.svg)](https://www.microsoft.com) [![Logo](Screenshots/.NET.svg)](https://www.microsoft.com/net) [![Logo](Screenshots/Google.svg)](https://www.google.com) [![Logo](Screenshots/Angular.svg)](https://angular.io)
 
-## Best Practices and Technologies:
+## Best Practices and Technologies
 
 * Visual Studio 2017
 * Visual Studio Code
@@ -29,69 +29,69 @@ This project has the purpose of serving as architecture for projects with ASP.NE
 * Response Caching (Microsoft.AspNetCore.ResponseCaching)
 * Object Mapping (AgileMapper)
 
-## Code Analysis:
+## Code Analysis
 
 [![CodeFactor](https://www.codefactor.io/repository/github/rafaelfgx/dotnetarchitecture/badge)](https://www.codefactor.io/repository/github/rafaelfgx/dotnetarchitecture)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0615df3d9c5a4acea8634e228709cf68)](https://www.codacy.com/app/rafaelfgx/DotNetArchitecture?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rafaelfgx/DotNetArchitecture&amp;utm_campaign=Badge_Grade)
 
-## Continuous Integration:
+## Continuous Integration
 
 [![Build Status](https://ci.appveyor.com/api/projects/status/x9782f129frchg3n?svg=true)](https://ci.appveyor.com/project/rafaelfgx/dotnetarchitecture)
 
-## Layers:
+## Layers
 
 ![Screenshot](Screenshots/1.png)
 
-## Application:
+## Application
 
 ![Screenshot](Screenshots/2.png)
 
-## Repository:
+## Repository
 
 ![Screenshot](Screenshots/3.png)
 
-## Unit Test:
+## Unit Test
 
 ![Screenshot](Screenshots/4.png)
 
-## ASP.NET Core + Angular:
+## ASP.NET Core + Angular
 
 ![Screenshot](Screenshots/5.png)
 
-## ASP.NET Core Startup:
+## ASP.NET Core Startup
 
 ![Screenshot](Screenshots/6.png)
 
-## ASP.NET Core Controller:
+## ASP.NET Core Controller
 
 ![Screenshot](Screenshots/7.png)
 
-## Angular Guard:
+## Angular Guard
 
 ![Screenshot](Screenshots/8.png)
 
-## Angular Error Handler:
+## Angular Error Handler
 
 ![Screenshot](Screenshots/9.png)
 
-## Angular HTTP Interceptor:
+## Angular HTTP Interceptor
 
 ![Screenshot](Screenshots/10.png)
 
-## Angular Service with Cache:
+## Angular Service with Cache
 
 ![Screenshot](Screenshots/11.png)
 
-## Angular Login Component:
+## Angular Login Component
 
 ![Screenshot](Screenshots/12.png)
 
-## ASP.NET Core + Angular Initial Loading:
+## ASP.NET Core + Angular Initial Loading
 
 ![Screenshot](Screenshots/13.png)
 
-## ASP.NET Core + Angular + Entity Framework Core + SQL Server Performance:
+## ASP.NET Core + Angular + Entity Framework Core + SQL Server Performance
 
 ![Screenshot](Screenshots/14.png)
 
@@ -103,23 +103,21 @@ This project has the purpose of serving as architecture for projects with ASP.NE
 
 **Storage:** Samsung Evo 960 SSD M2 250gb.
 
-## Visual Studio Extensions:
+## Visual Studio Extensions
 
-1. **CodeMaid**: https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid
+1. **CodeMaid**: <https://marketplace.visualstudio.com/items?itemName=SteveCadwallader.CodeMaid>
 
-2. **SonarLint**: https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017
+2. **SonarLint**: <https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio2017>
 
-3. **TSLint**: https://marketplace.visualstudio.com/items?itemName=vladeck.TSLint
+3. **TSLint**: <https://marketplace.visualstudio.com/items?itemName=vladeck.TSLint>
 
-## Run in Visual Studio Code:
+## Run in Visual Studio Code
 
 **NOTE:** If **Visual Studio 2017** is installed and the **packages** folder exists, go to **step 4**.
 
-1. Install **SDKs** (.NET Core 2.x and .NET Framework 4.7.2):
-https://www.microsoft.com/net/download/visual-studio-sdks
+1. Install **SDKs** (.NET Core 2.x and .NET Framework 4.7.2): <https://www.microsoft.com/net/download/visual-studio-sdks>
 
-2. Download latest **nuget.exe** and copy to **Solution Folder**:
-https://www.nuget.org/downloads
+2. Download latest **nuget.exe** and copy to **Solution Folder**: <https://www.nuget.org/downloads>
 
 3. Open **Command Prompt** in **Solution Folder** and run **nuget restore**.
 
@@ -129,9 +127,9 @@ https://www.nuget.org/downloads
 
 6. Press **F5**, run and fun!
 
-## Publish and Run in IIS:
+## Publish and Run in IIS
 
-1. Install **NET Core 2.0 Windows Hosting**: https://aka.ms/dotnetcore-2-windowshosting.
+1. Install **NET Core 2.0 Windows Hosting**: <https://aka.ms/dotnetcore-2-windowshosting>.
 
 2. Change the **SQL Server Database Connection String** in the **Solution.Web.UI\AppSettings.json**.
 
