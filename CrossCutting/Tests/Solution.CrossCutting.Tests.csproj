@@ -164,6 +164,10 @@
       <Project>{A8E06502-63F8-4526-8B33-21B72660EB8B}</Project>
       <Name>Solution.CrossCutting.Security</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utils\Solution.CrossCutting.Utils.csproj">
+      <Project>{AC5DBDE6-F960-4BEB-AB4A-6F29FEDFD040}</Project>
+      <Name>Solution.CrossCutting.Utils</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\Solution Items\App.config">

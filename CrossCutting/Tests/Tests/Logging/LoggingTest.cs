@@ -1,6 +1,6 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Solution.CrossCutting.Logging;
+using Solution.CrossCutting.Utils;
 
 namespace Solution.CrossCutting.Tests
 {
@@ -18,7 +18,7 @@ namespace Solution.CrossCutting.Tests
 		[TestMethod]
 		public void Logging_Error()
 		{
-			Logging.Error(new Exception(nameof(Exception)));
+			Logging.Error(new DomainException(nameof(DomainException)));
 		}
 
 		[TestMethod]
