@@ -8,20 +8,19 @@ using Solution.Model.Models;
 namespace Solution.Infrastructure.Tests
 {
 	[TestClass]
-	public class DatabaseTest
+	public class DatabaseUnitOfWorkTest
 	{
-		public DatabaseTest()
+		public DatabaseUnitOfWorkTest()
 		{
 			DependencyInjection.RegisterServices();
 			DependencyInjection.AddDbContextInMemoryDatabase<DatabaseContext>();
-			DependencyInjection.GetService<DatabaseContext>().Seed();
 			DatabaseUnitOfWork = DependencyInjection.GetService<IDatabaseUnitOfWork>();
 		}
 
 		private IDatabaseUnitOfWork DatabaseUnitOfWork { get; }
 
 		[TestMethod]
-		public void DatabaseUnitOfWork_Repository()
+		public void DatabaseUnitOfWork_Repositories()
 		{
 			/// Create
 			var user = new UserModel

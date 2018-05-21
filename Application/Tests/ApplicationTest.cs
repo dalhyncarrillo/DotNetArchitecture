@@ -12,7 +12,6 @@ namespace Solution.Application.Tests
 		{
 			DependencyInjection.RegisterServices();
 			DependencyInjection.AddDbContextInMemoryDatabase<DatabaseContext>();
-			DependencyInjection.GetService<DatabaseContext>().Seed();
 			UserApplication = DependencyInjection.GetService<IUserApplication>();
 		}
 
@@ -21,8 +20,8 @@ namespace Solution.Application.Tests
 		[TestMethod]
 		public void UserApplication_Select()
 		{
-			var result = UserApplication.Select(1);
-			Assert.IsNotNull(result);
+			var user = UserApplication.Select(0);
+			Assert.IsNull(user);
 		}
 	}
 }

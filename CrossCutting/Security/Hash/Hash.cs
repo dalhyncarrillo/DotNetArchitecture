@@ -8,7 +8,10 @@ namespace Solution.CrossCutting.Security
 	{
 		public string Generate(string value)
 		{
-			if (string.IsNullOrWhiteSpace(value)) { return null; }
+			if (string.IsNullOrWhiteSpace(value))
+			{
+				throw new ArgumentNullException(value);
+			}
 
 			using (var algorithm = new SHA512Managed())
 			{

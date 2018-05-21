@@ -22,10 +22,5 @@ namespace Solution.CrossCutting.Security
 		{
 			claims.Add(new Claim(JwtRegisteredClaimNames.Sub, sub));
 		}
-
-		public static void AddUserData(this IList<Claim> claims, string userData)
-		{
-			claims.Add(new Claim(ClaimTypes.UserData, userData));
-		}
 	}
 }

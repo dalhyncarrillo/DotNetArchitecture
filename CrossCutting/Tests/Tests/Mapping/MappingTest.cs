@@ -23,11 +23,11 @@ namespace Solution.CrossCutting.Tests
 		{
 			var source = new UserModel
 			{
-				Name = "Name",
-				UserId = 1,
 				Email = "email@mail.com",
 				Login = "login",
-				Password = "password"
+				Name = "Name",
+				Password = "password",
+				UserId = 1
 			};
 
 			var result = Mapping.Clone(source);

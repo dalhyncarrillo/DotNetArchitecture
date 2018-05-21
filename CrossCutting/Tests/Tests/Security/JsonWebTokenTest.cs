@@ -15,11 +15,18 @@ namespace Solution.CrossCutting.Tests
 		private IJsonWebToken JsonWebToken { get; }
 
 		[TestMethod]
-		public void JsonWebToken_Encode_Decode()
+		public void JsonWebToken_EncodeDecode()
 		{
 			var encoded = JsonWebToken.Encode("sub", new[] { "admin" });
 			var decoded = JsonWebToken.Decode(encoded);
 			Assert.IsNotNull(decoded);
+		}
+
+		[TestMethod]
+		public void JsonWebToken_GetTokenValidationParameters()
+		{
+			var parameters = JsonWebToken.GetTokenValidationParameters();
+			Assert.IsNotNull(parameters);
 		}
 	}
 }

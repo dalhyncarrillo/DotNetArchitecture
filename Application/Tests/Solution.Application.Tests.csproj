@@ -59,9 +59,17 @@
       <Project>{E86167F0-A9EC-4DC2-B43F-839C0C2A24A9}</Project>
       <Name>Solution.CrossCutting.DependencyInjection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\CrossCutting\Utils\Solution.CrossCutting.Utils.csproj">
+      <Project>{AC5DBDE6-F960-4BEB-AB4A-6F29FEDFD040}</Project>
+      <Name>Solution.CrossCutting.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Infrastructure\Databases\Database\Solution.Infrastructure.Databases.Database.csproj">
       <Project>{31B7BF75-B759-49C9-B724-EABD5266083C}</Project>
       <Name>Solution.Infrastructure.Databases.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Enums\Solution.Model.Enums.csproj">
+      <Project>{3E3871E5-72C5-4E33-BFCA-6796B93F8145}</Project>
+      <Name>Solution.Model.Enums</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Model\Models\Solution.Model.Models.csproj">
       <Project>{E860A484-DB10-401B-AAAE-951BE9109B04}</Project>
@@ -108,6 +116,9 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MSTest.TestFramework.1.3.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
