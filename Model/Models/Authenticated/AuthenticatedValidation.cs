@@ -10,7 +10,7 @@ namespace Solution.Model.Models
 		{
 			var validationResult = new ValidationResult();
 
-			if (obj == null || obj.UserId == 0 || obj.Roles == null || !obj.Roles.Any())
+			if (obj == null || obj.UserId == 0 || obj.Roles?.Any() != true)
 			{
 				validationResult.Errors.Add(nameof(Texts.AuthenticationInvalid), Texts.AuthenticationInvalid);
 			}

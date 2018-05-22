@@ -10,8 +10,8 @@ namespace Solution.Web.UI.Middlewares
 {
 	public class ExceptionMiddleware
 	{
-		readonly IHostingEnvironment _environment;
-		readonly RequestDelegate _request;
+		private readonly IHostingEnvironment _environment;
+		private readonly RequestDelegate _request;
 
 		public ExceptionMiddleware(IHostingEnvironment environment, RequestDelegate request)
 		{
@@ -23,14 +23,14 @@ namespace Solution.Web.UI.Middlewares
 		{
 			try
 			{
-				await _request(context);
+				await _request(context).ConfigureAwait(false);
 			}
 			catch (DomainException exception)
 			{
 				context.Response.Clear();
 				context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
 				context.Response.ContentType = "application/json";
-				await context.Response.WriteAsync(exception.Message);
+				await context.Response.WriteAsync(exception.Message).ConfigureAwait(false);
 			}
 			catch (Exception exception)
 			{
@@ -38,7 +38,7 @@ namespace Solution.Web.UI.Middlewares
 				context.Response.Clear();
 				context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 				context.Response.ContentType = MediaTypeNames.Text.Plain;
-				await context.Response.WriteAsync(exception.GetDetail());
+				await context.Response.WriteAsync(exception.GetDetail()).ConfigureAwait(false);
 			}
 		}
 	}

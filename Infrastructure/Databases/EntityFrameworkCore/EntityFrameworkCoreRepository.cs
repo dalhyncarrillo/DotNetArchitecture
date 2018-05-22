@@ -26,19 +26,9 @@ namespace Solution.Infrastructure.Databases.EntityFrameworkCore
 			Set.Add(entity);
 		}
 
-		public void AddAsync(TEntity entity)
-		{
-			Set.AddAsync(entity);
-		}
-
 		public void AddRange(params TEntity[] entities)
 		{
 			Set.AddRange(entities);
-		}
-
-		public void AddRangeAsync(params TEntity[] entities)
-		{
-			Set.AddRangeAsync(entities);
 		}
 
 		public bool Any()
@@ -111,14 +101,14 @@ namespace Solution.Infrastructure.Databases.EntityFrameworkCore
 			return Queryable(where, properties).FirstOrDefault();
 		}
 
-		public async Task<TEntity> FirstOrDefaultAsync(params Expression<Func<TEntity, object>>[] properties)
+		public Task<TEntity> FirstOrDefaultAsync(params Expression<Func<TEntity, object>>[] properties)
 		{
-			return await Queryable(properties).FirstOrDefaultAsync();
+			return Queryable(properties).FirstOrDefaultAsync();
 		}
 
-		public async Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> where, params Expression<Func<TEntity, object>>[] properties)
+		public Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> where, params Expression<Func<TEntity, object>>[] properties)
 		{
-			return await Queryable(where, properties).FirstOrDefaultAsync();
+			return Queryable(where, properties).FirstOrDefaultAsync();
 		}
 
 		public TEntity LastOrDefault(params Expression<Func<TEntity, object>>[] properties)
@@ -163,12 +153,12 @@ namespace Solution.Infrastructure.Databases.EntityFrameworkCore
 
 		public async Task<IEnumerable<TEntity>> ListAsync(params Expression<Func<TEntity, object>>[] properties)
 		{
-			return await Queryable(properties).ToListAsync();
+			return await Queryable(properties).ToListAsync().ConfigureAwait(false);
 		}
 
 		public async Task<IEnumerable<TEntity>> ListAsync(Expression<Func<TEntity, bool>> where, params Expression<Func<TEntity, object>>[] properties)
 		{
-			return await Queryable(where, properties).ToListAsync();
+			return await Queryable(where, properties).ToListAsync().ConfigureAwait(false);
 		}
 
 		public IQueryable<TEntity> Queryable(params Expression<Func<TEntity, object>>[] properties)
@@ -196,9 +186,9 @@ namespace Solution.Infrastructure.Databases.EntityFrameworkCore
 			return Queryable(where, properties).SingleOrDefault();
 		}
 
-		public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> where, params Expression<Func<TEntity, object>>[] properties)
+		public Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> where, params Expression<Func<TEntity, object>>[] properties)
 		{
-			return await Queryable(where, properties).SingleOrDefaultAsync();
+			return Queryable(where, properties).SingleOrDefaultAsync();
 		}
 
 		public void Update(TEntity entity, object key)

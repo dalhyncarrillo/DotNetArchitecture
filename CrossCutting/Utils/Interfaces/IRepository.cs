@@ -10,11 +10,7 @@ namespace Solution.CrossCutting.Utils
 	{
 		void Add(TEntity entity);
 
-		void AddAsync(TEntity entity);
-
 		void AddRange(params TEntity[] entities);
-
-		void AddRangeAsync(params TEntity[] entities);
 
 		bool Any();
 

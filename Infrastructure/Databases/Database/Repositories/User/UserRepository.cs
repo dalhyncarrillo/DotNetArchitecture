@@ -23,9 +23,9 @@ namespace Solution.Infrastructure.Databases.Database.Repositories
 				},
 				where =>
 				(
-					where.Login.Equals(authentication.Login) &&
-					where.Password.Equals(authentication.Password) &&
-					where.Status == Status.Active
+					where.Login.Equals(authentication.Login)
+					&& where.Password.Equals(authentication.Password)
+					&& where.Status == Status.Active
 				)
 			)
 			.SingleOrDefault();

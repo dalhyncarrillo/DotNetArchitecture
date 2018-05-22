@@ -10,14 +10,14 @@ namespace Solution.CrossCutting.Utils
 		{
 			var sb = new StringBuilder();
 
-			sb.Append($"ERROR: '{exception.Message}' ");
+			sb.Append("ERROR: ").Append(exception.Message).Append(". ");
 
 			var stackFrame = new StackTrace(exception, true).GetFrame(0);
 
 			if (stackFrame != null)
 			{
-				sb.Append($"FILE: '{stackFrame.GetMethod().DeclaringType}' ");
-				sb.Append($"LINE: {stackFrame.GetFileLineNumber()}.");
+				sb.Append("FILE: ").Append(stackFrame.GetMethod().DeclaringType).Append(". ");
+				sb.Append("LINE: ").Append(stackFrame.GetFileLineNumber()).Append(".");
 			}
 
 			return sb.ToString();
