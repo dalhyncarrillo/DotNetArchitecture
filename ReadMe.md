@@ -12,7 +12,7 @@ This project has the purpose of serving as architecture for projects with ASP.NE
 * .NET Core 2.0
 * C# 7.2
 * ASP.NET Core 2.0
-* Angular 6.0.2
+* Angular 6.0.3
 * Typescript 2.7.2
 * HTML5
 * CSS3
